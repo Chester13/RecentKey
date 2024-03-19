@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:description="@string/accessibility"/>
+-->
+
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFlags="flagDefault"
+    android:accessibilityFeedbackType="feedbackAllMask"
+    android:notificationTimeout="2000"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="true"
+    android:canRequestFilterKeyEvents="true"
+    android:canRequestEnhancedWebAccessibility="true"
+    android:settingsActivity="com.android.recentkey.MyAccessibilityService"
+    />

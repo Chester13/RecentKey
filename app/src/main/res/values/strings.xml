@@ -1,0 +1,4 @@
+<resources>
+    <string name="label">RecentKey</string>
+    <string name="accessibility">For perform recent key</string>
+</resources>

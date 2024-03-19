@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.recentkey">
+
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/label"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/label"
+            android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:excludeFromRecents="true"
+            android:enabled="true"
+            android:exported="true"
+            android:name=".MyAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service"/>
+        </service>
+
+    </application>
+
+</manifest>
